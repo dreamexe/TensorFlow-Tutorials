@@ -2,8 +2,8 @@
 # X 와 Y 의 상관관계를 분석하는 기초적인 선형 회귀 모델을 만들고 실행해봅니다.
 
 import os
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'    # default value = 0  From http://stackoverflow.com/questions/35911252/disable-tensorflow-debugging-information
+
 import tensorflow as tf
 
 
