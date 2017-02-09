@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # 텐서플로우의 기본적인 구성을 익힙니다.
 
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'    # default value = 0  From http://stackoverflow.com/questions/35911252/disable-tensorflow-debugging-information
 import tensorflow as tf
 
 
@@ -36,7 +39,7 @@ sess.run(tf.global_variables_initializer())
 # 위에서 변수와 수식들을 정의했지만, 실행이 정의한 시점에서 실행되는 것은 아닙니다.
 # 다음처럼 sess.run 함수를 사용하면 그 때 계산이 됩니다.
 # 따라서 모델을 구성하는 것과, 실행하는 것을 분리하여 프로그램을 깔끔하게 작성할 수 있습니다.
-print("=== contants ===")
+print ("=== contants ===")
 print (sess.run(hello))
 print ("a + b = c =", sess.run(c))
 print ("=== x_data ===")
